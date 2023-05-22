@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AplikasiPakarAyam</string>
+    <string name="username_email">Username/Email</string>
+    <string name="password">Password</string>
+    <string name="title">Sistem Pakar Ayam</string>
+    <string name="desc">Cek gejala di app ini</string>
+    <string name="login">LOGIN</string>
+    <string name="guests">Anda seorang tamu?</string>
+    <string name="klik_disini">klik disini.</string>
+    <string name="enter_username_or_email">Enter username or email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="guest_button">Masuk sebagai TAMU</string>
+</resources>
