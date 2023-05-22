@@ -37,7 +37,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menu"
+        android:text="@string/Bantuan"
         android:textSize="30sp"
         android:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +51,7 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="411dp"
-        android:layout_height="561dp"
+        android:layout_height="520dp"
         android:layout_marginTop="1dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -164,7 +164,7 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="14dp"
-                    android:layout_weight="0.5" />
+                    android:layout_weight="0.2" />
 
             </LinearLayout>
         </LinearLayout>

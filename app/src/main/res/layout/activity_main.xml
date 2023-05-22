@@ -135,7 +135,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintVertical_bias="0.975"
         app:srcCompat="@drawable/rounded_button"
         tools:ignore="MissingConstraints,ImageContrastCheck,VisualLintBounds" />
 
@@ -186,8 +186,7 @@
         android:layout_width="329dp"
         android:layout_height="59dp"
         android:layout_marginTop="17dp"
-        android:background="@drawable/button_blue"
-        android:backgroundTint="#12CBC4"
+        android:background="@drawable/rounded"
         android:text="@string/guest_button"
         android:textColor="#FFFFFF"
         android:textColorLink="#12CBC4"
