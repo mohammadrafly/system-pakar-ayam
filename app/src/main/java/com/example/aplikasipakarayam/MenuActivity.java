@@ -12,9 +12,24 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        View guestButton = findViewById(R.id.buttonBack);
-        guestButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+        View backButton = findViewById(R.id.buttonBack);
+        backButton.setOnClickListener(v -> finish());
+
+        View bantuanButton = findViewById(R.id.bantuanButton);
+        bantuanButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuActivity.this, BantuanActivity.class);
+            startActivity(intent);
+        });
+
+        View tentangButton = findViewById(R.id.tentangButton);
+        tentangButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuActivity.this, TentangActivity.class);
+            startActivity(intent);
+        });
+
+        View diagnosaButton = findViewById(R.id.diagnosaButton);
+        diagnosaButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuActivity.this, DiagnosaActivity.class);
             startActivity(intent);
         });
     }

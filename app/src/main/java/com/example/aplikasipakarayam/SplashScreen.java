@@ -18,11 +18,10 @@ public class SplashScreen extends AppCompatActivity {
         Animation rotationAnimation = AnimationUtils.loadAnimation(this, R.anim.spinner);
         spinnerImageView.startAnimation(rotationAnimation);
 
-        // Simulate a delay before launching the main activity
         Thread timerThread = new Thread() {
             public void run() {
                 try {
-                    sleep(3000);  // Adjust the delay as needed
+                    sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {

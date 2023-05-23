@@ -6,20 +6,6 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="49dp"
-        android:layout_height="40dp"
-        android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.917"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
-        app:srcCompat="@mipmap/drawer"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
         android:id="@+id/buttonBack"
         android:layout_width="49dp"
         android:layout_height="40dp"
@@ -50,13 +36,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="411dp"
-        android:layout_height="561dp"
+        android:layout_width="410dp"
+        android:layout_height="559dp"
         android:layout_marginTop="1dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView" >
 
     </LinearLayout>
 
@@ -68,7 +54,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="VisualLintBounds">
 
         <Space
             android:layout_width="wrap_content"
@@ -96,11 +83,11 @@
 
                     <Space
                         android:layout_width="match_parent"
-                        android:layout_height="12dp" />
+                        android:layout_height="15dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="76dp"
                         android:baselineAligned="false"
                         android:orientation="horizontal">
 
@@ -112,7 +99,7 @@
                             tools:ignore="VisualLintBounds">
 
                             <ImageButton
-                                android:id="@+id/imageButton12"
+                                android:id="@+id/homeButton"
                                 android:layout_width="match_parent"
                                 android:layout_height="71dp"
                                 android:layout_weight="1"
@@ -129,7 +116,7 @@
                                 android:gravity="center"
                                 android:text="Home"
                                 android:textColor="#FFFFFF"
-                                tools:ignore="HardcodedText" />
+                                tools:ignore="HardcodedText,TextSizeCheck" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -139,7 +126,7 @@
                             android:orientation="vertical">
 
                             <ImageButton
-                                android:id="@+id/imageButton13"
+                                android:id="@+id/diagnosaButton"
                                 android:layout_width="match_parent"
                                 android:layout_height="56dp"
                                 android:layout_weight="1"
@@ -149,7 +136,7 @@
                                 tools:ignore="NestedWeights,SpeakableTextPresentCheck" />
 
                             <TextView
-                                android:id="@+id/textView9"
+                                android:id="@+id/textView4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -158,6 +145,62 @@
                                 android:textColor="#FFFFFF"
                                 tools:ignore="HardcodedText" />
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="135dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <ImageButton
+                                android:id="@+id/bantuanButton"
+                                android:layout_width="92dp"
+                                android:layout_height="55dp"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:importantForAccessibility="no"
+                                app:srcCompat="@mipmap/question_white_foreground"
+                                tools:ignore="NestedWeights,SpeakableTextPresentCheck,VisualLintBounds" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="92dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Bantuan"
+                                android:textColor="#FFFFFF"
+                                tools:ignore="HardcodedText,VisualLintBounds" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="153dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/tentangButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:background="@android:color/transparent"
+                                android:importantForAccessibility="no"
+                                app:srcCompat="@mipmap/danger_white_foreground"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Tentang"
+                                android:textColor="#FFFFFF"
+                                tools:ignore="HardcodedText,NestedWeights" />
+                        </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
 
