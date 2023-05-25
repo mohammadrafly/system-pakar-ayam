@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@mipmap/home_white_foreground"/>
+    <item
+        android:id="@+id/penyakit"
+        android:title="Penyakit"
+        android:icon="@mipmap/question_white_foreground"/>
+    <item
+        android:id="@+id/diagnosa"
+        android:title="Diagnosa"
+        android:icon="@mipmap/search_white_foreground"/>
+    <item
+        android:id="@+id/bantuan"
+        android:title="Bantuan"
+        android:icon="@mipmap/question_white_foreground"/>
+
+    <item
+        android:id="@+id/tentang"
+        android:title="Profile"
+        android:icon="@mipmap/danger_white_foreground"/>
+</menu>

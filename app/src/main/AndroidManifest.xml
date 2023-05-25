@@ -28,15 +28,6 @@
         <activity
             android:name=".MenuActivity">
         </activity>
-        <activity
-            android:name=".DiagnosaActivity">
-        </activity>
-        <activity
-            android:name=".BantuanActivity">
-        </activity>
-        <activity
-            android:name=".TentangActivity">
-        </activity>
     </application>
 
 </manifest>
