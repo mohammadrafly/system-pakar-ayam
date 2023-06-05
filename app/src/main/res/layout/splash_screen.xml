@@ -3,34 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/yellow"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="201dp"
-        android:layout_height="205dp"
+        android:layout_width="219dp"
+        android:layout_height="225dp"
+        android:background="@android:color/transparent"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452"
-        app:srcCompat="@mipmap/logo"
-        android:background="@android:color/transparent"
-        android:importantForAccessibility="no" />
+        app:layout_constraintVertical_bias="0.349"
+        app:srcCompat="@mipmap/logo_foreground" />
 
     <ImageView
         android:id="@+id/spinnerImageView"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:importantForAccessibility="no"
         android:src="@drawable/spinner"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        android:background="@android:color/transparent"
-        app:layout_constraintVertical_bias="0.093"
-        android:importantForAccessibility="no" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="267dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="AYAM EXPERT"
+        android:textSize="31sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

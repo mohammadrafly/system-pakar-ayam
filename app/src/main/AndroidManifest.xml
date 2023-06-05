@@ -23,9 +23,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity">
-        </activity>
-        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:name=".MenuActivity">
         </activity>
     </application>

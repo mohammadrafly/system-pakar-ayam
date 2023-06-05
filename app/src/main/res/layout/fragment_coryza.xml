@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Penyakit Infectious Coryza"
+            android:textColor="#526D82"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="324dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Penyakit Infectious Coryza disebabkan oleh bakteri gram negatif bernama Hemophilus paragallinarum. Coryza merupakan penyakit yang menyerang sistem pernapasan ayam yang bersifat akut dan subakut. Masa inkubasi terjadinya penyakit ini adalah 24-48 jam setelah terkontaminasi melalui intranasal atau intrasinus. Infectious  coryza merupakan penyakit yang menyerang secara cepat dengan tingkat penuluran (morbidity) tinggi. Penyakit ini dapat menurunkan konsusmsi pakan dan produksi telur."
+            android:textColor="#526D82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <TextView
+            android:id="@+id/descriptionTextView2"
+            android:layout_width="325dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Bakteri ini dapat dicegah dengan cara disenfektan, vaksinasi menggunakan bacterin dapat dilakukan untuk meningkatkan kekebalan tubuh,
+Mencegah penularan penyakit ini bisa dilakukan dengan cara memusnahkan ayam yang terserang ; mengosongkan kandang selama beberapa hari kemudian mencuci dan membersihkannya; serta meningkatkan program sanitasi .
+ Pengobatan dapat dilakukan dengan menggunkan beberapa preparat sulfanamides dan atibioti yang diberikan melalui pakan atau air minum usahakan melakukan pengobatan ini jangan sampai berhenti karena dikhawatirkan ayam akan kambuh lagi. Beberapa obat dan antibiotik yang digunakan streptomycin,Sulfadimethoxine, dan tylosin.
+"
+            android:textColor="#526D82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

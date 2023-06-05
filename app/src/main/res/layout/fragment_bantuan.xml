@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BantuanFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/descriptionTextView2"
+            android:layout_width="325dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Sistem ini merupakan sebuah perangkat lunak yang digunakan untuk memecahkan masalah yang biasanya diselesaikan oleh para pakar. Cara kerja dari Aplikasi ini adalah peternak terlebih dahulu mengetahui jenis penyakit apa yang diderita oleh ayam bangkoknya, setelah itu apakah benar keyakinan tentang penyakit ayam tersebut, lalu ditampilkan gejala –gejala awal yang dialami oleh ayam yang akan diproses menggunakan metode teorema bayes. Hasil akhirnya berupa presentasi dugaan penyakit yang diderita ayam."
+            android:textColor="#526D82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.296"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+        <TextView
+            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="132dp"
+            android:fontFamily="sans-serif-condensed-medium"
             android:text="Bantuan"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="#526D82"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionTextView3"
+            android:layout_width="325dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Dalam aplikasi ini juga memiliki solusi atau cara penanggulangan pertama pada ayam yang terkena penyakit,sehingga memerpermudah peternak dalam penanganan penyakit ayam bangkok. Namun untuk penanggulangan aplikasi ini disarankan , apabila selama 3 hari penyakit tidak kunjung sembuh atau pulih segera untuk menghubungi dokter hewan."
+            android:textColor="#526D82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.296"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView2" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="325dp"
+            android:layout_height="87dp"
+            android:layout_marginTop="188dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Aplikasi ini merupakan aplikasi sistem pakar untuk mendiagnosa penyakit pada ayam yang berbasis Android. Pembuatan Aplikasi ini bertujuan untuk membantu para peternak ayam yang awam terhadap penyakit – penyakit yang sering menyerang ayam."
+            android:textColor="#526D82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.296"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/logo_foreground" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+
+</LinearLayout>
