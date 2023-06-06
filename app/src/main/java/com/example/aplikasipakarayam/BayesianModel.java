@@ -16,10 +16,10 @@ public class BayesianModel {
         defaultPriorProbability = 0.0;
 
         priorProbabilities.put("Penyakit Gumboro", 0.3);
-        priorProbabilities.put("Infectious Coryza", 0.4);
+        priorProbabilities.put("Infectious Coryza", 0.3);
         priorProbabilities.put("Avian Influenza", 0.3);
         priorProbabilities.put("Infectious Bronchitis", 0.3);
-        priorProbabilities.put("New Castle Disease", 0.4);
+        priorProbabilities.put("New Castle Disease", 0.3);
         priorProbabilities.put("Pullorum Disease", 0.3);
 
         conditionalProbabilities.put("Gumboro", createGumboroConditionalProbabilities());

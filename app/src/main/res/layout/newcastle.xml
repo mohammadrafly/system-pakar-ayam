@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="168dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Penyakit New Castle Disease (Tetelo)"
+            android:textColor="#526D82"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="325dp"
+            android:layout_height="253dp"
+            android:layout_marginTop="220dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="penyakit ND sering disebut juga penyakit Tetelo, dimana penyakit ini disebabkan oleh virus Paramyxo yang menyerang saluran pernapasan. Penyakit ini dapat menyerang beberapa jenis unggas, baik yang masih liar maupun yang sudah dibudidayakan. Masa inkubasi penyakit ini beragam 2-15 hari, tergantung dari virus yang menginfeksi,umur, dan status kekebalan ayam, infeksi organisme lain, kondisi lingkungan dan jalur penuluran. Penyakit ND dapat menyebar secara cepat melalui udara, pakaian, peralatan, dan pakan.
+Pencegahan penyakit ND hanya bisa dengan cara mberikan vaksinasi tetapi untuk penyembuhan penyakit ini belum ada obat.
+"
+            android:textColor="#526D82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="214dp"
+            android:layout_height="169dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/newcastle_foreground" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

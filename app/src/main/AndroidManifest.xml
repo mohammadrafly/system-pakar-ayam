@@ -27,6 +27,30 @@
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:name=".MenuActivity">
         </activity>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".penyakit.BronchitisActivity">
+        </activity>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".penyakit.CoryzaActivity">
+        </activity>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".penyakit.GumboroActivity">
+        </activity>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".penyakit.InfluenzaActivity">
+        </activity>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".penyakit.NewCastleActivity">
+        </activity>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".penyakit.PullorumActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="329dp"
+            android:layout_height="233dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Avian Influenza (AI) atau lebih dikenal dengan sebutan penyakit flu burung disebabkan oleh virus yang diklasifisikan ke dalam orthomyxoviruses dan memiliki tiga tipe A,B, dan C. Virus ini menyerang bagian pernapasan atau sistem saraf. Penyakit ini bisa menyebar dengan cara unggas yang terjangkit AI mengeluarkan virus melalui saluran pernapasan,conjunctiva,dan kotoran. Penyakit tersebut menular melalui kontak langsung antara ayam yang sakit dan ayam yang sehat. Selain itu , bisa menular secara tidak langsung melalui udara atau virus yang dikeluarkan melalui kotoran,kendaraan, peralatan,pakan, dan air minum yang sudah terkontaminasi AI"
+            android:textColor="#526D82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <TextView
+            android:id="@+id/descriptionTextView2"
+            android:layout_width="330dp"
+            android:layout_height="222dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Cara menanggulangi penyakit ini dengan cara pemberian antibiotik, multivitamin, melaksanakan vaksisnasi ; mengisolasi farm atau peternakan yang terkena ; memusnahkan semua ayama yang terinfeksi; melarang keluar masuk peralatan, orang dan kendaraan ke daerah peternakan yang terkena AI ; melakukan sanitasi(biosecurity) ketat; serta mengistirahatkan farm yang terinfeksi. Belum ada obat yang efektif untuk mengatasi penyakit ini, upaya yang bisa dilakukan adallah memberi pakan yang berkualitas, memperbaiki manajemen pemeliharaan dan meberikan antibiotik spektrum luas."
+            android:textColor="#526D82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="148dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Penyakit Avian Influenza (Flu Burung)"
+            android:textColor="#526D82"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="148dp"
+            android:layout_height="131dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/influenza_foreground" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
