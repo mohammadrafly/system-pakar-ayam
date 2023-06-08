@@ -1,4 +1,37 @@
 <resources>
+
+    <string-array name="symptoms_array">
+        <item>Ayam bersin</item>
+        <item>Ayam batuk</item>
+        <item>Ayam mengap-mengap</item>
+        <item>Ayam tampak lesu</item>
+        <item>Badan ayam bergetar</item>
+        <item>Badan lemah</item>
+        <item>Bulu tampak jatuh ke bawah</item>
+        <item>Diare</item>
+        <item>Diare kehijauan</item>
+        <item>Jengger berwarna keabuan</item>
+        <item>Keluar lendir pada hidung</item>
+        <item>Kotoran berwarna putih</item>
+        <item>Leleran di hidung</item>
+        <item>Lesu</item>
+        <item>Lumpuh karena athritis</item>
+        <item>Mata berair</item>
+        <item>Napsu makan menurun</item>
+        <item>Napsu makan pada ayam menurun</item>
+        <item>Napsu makan dan Berat badan turun drastis</item>
+        <item>Napas mengih-mengih</item>
+        <item>Ngorok basah</item>
+        <item>Pembengkakan di sinus</item>
+        <item>Pembengkakan di daerah mata dan muka</item>
+        <item>Produksi telur menurun</item>
+        <item>Sayap menggantung dan lemas</item>
+        <item>Sinusitis</item>
+        <item>Tubuh ayam bergetar</item>
+        <item>Terjadi pembengkakan di daerah mata dan muka</item>
+    </string-array>
+
+
     <string name="app_name">AplikasiPakarAyam</string>
     <string name="username_email">Username/Email</string>
     <string name="password">Password</string>

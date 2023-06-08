@@ -6,26 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        android:background="@color/blue"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
         <ImageView
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="Back"
-            android:onClick="onBackButtonClicked"
             android:padding="12dp"
-            android:src="@mipmap/back_foreground" />
-
+            android:src="@drawable/back_foreground" />
     </androidx.appcompat.widget.Toolbar>
 
     <FrameLayout

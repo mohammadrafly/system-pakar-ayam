@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,7 +6,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
         android:padding="16dp">
 
         <ImageView
@@ -24,19 +20,20 @@
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-condensed-medium"
             android:text="TENTANG"
             android:textColor="#526D82"
+            android:fontFamily="sans-serif-condensed-medium"
             android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/appInfoTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:gravity="left"
+            android:gravity="center"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Aplikasi ini dibuat sebagai persyaratan untuk memperoleh gelar Amd di Jurusan Teknologi Informasi Program Studi Manajemen Informatika Politeknik Negeri Jember"
             android:textColor="#526D82" />
@@ -45,16 +42,18 @@
             android:id="@+id/appNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Nama Aplikasi: Sistem Pakar Ayam"
             android:textColor="#526D82" />
 
         <TextView
             android:id="@+id/thesisTitleTextView"
-            android:layout_width="343dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Judul Tugas Akhir: Sistem Pakar Diagnosa Penyakit Ayam Menggunakan Metode Teorema Bayes Berbasis Android"
             android:textColor="#526D82" />
@@ -63,7 +62,8 @@
             android:id="@+id/studentNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Nama: Aisyah Utrujjah"
             android:textColor="#526D82" />
@@ -73,6 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Nim: E31201300"
             android:textColor="#526D82" />
@@ -81,7 +82,8 @@
             android:id="@+id/supervisorTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Pembimbing: Syamsul Arifin, S.Kom, M.Cs"
             android:textColor="#526D82" />
@@ -90,7 +92,8 @@
             android:id="@+id/expertTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Pakar: Drh. Dharwin Siswantoro, M.kes."
             android:textColor="#526D82" />
