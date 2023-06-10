@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f3f3f3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -24,7 +25,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Penyakit Infectious Bronchitis"
-                android:textColor="#526D82"
+                android:textColor="@color/gray"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginTop="15dp" />
@@ -43,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Pada tahun 1940 penyakit ini telah menyerang secara ganas ayam yang sedang produksi hingga menurun drastis. Infectious Bronchitis bersifat akut dan menyerang saluran pernapasan dan saluran reproduksi. penyakit inidisebabkan oleh virus dari famili Coronaviriade dan genus Coronavirus yang memiliki sifat penularan tinggi. Masa inkubasi penyakit IB adalah 18-36 jam. Ayam yang terinfeksi melalui saluran trakea dari udara yang membawa virus IB memerlukan waktu 24 jam. Sementara itu, penyebaran secara alami berlangsung selama 36 jam. Penyakit ini bisa menyerang semua golongan umur ayam."
-                android:textColor="#526D82" />
+                android:textColor="@color/gray" />
 
             <TextView
                 android:id="@+id/descriptionTextView2"
@@ -52,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Infeksi dengan virus IB tidak dapat diobati. Perbaikan manajemen untuk menghilangkan faktor pendukung terjadinya IB atau untuk mengurangi efek penyakit ini diperlukan, misalnya temperatur pemanas yang optimal pada saat broading, kurangi kepadatan kandang dan kualitas pakan yang ketat. Penggobatan supportif dengan cara pemberian multivitamin atau campuran multivitamin dan elektrolit juga perlu dilakukan untuk mempercepat proses kesembuhan jaringan yang rusak akibat virus IB."
-                android:textColor="#526D82" />
+                android:textColor="@color/gray" />
 
         </LinearLayout>
     </ScrollView>

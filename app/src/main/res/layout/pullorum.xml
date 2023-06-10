@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f3f3f3"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -18,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Penyakit Pullorum Disease (Berak Kapur)"
-            android:textColor="#526D82"
+            android:textColor="@color/gray"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="15dp" />
@@ -37,7 +38,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Penyakit ini disebut juga dengan berak putih atau bacillary white diarrhea (BWD). Penyakit ini bersifat infeksius (mudah menginfeksi) yang disebabkan oleh bakteri Salmonella pullorum. Ayam yang terinfeksi bakteri ini sering mengalami diare dengan feses berwarna putih. Penyebaran penyakit ini dapat terjadi melalui kotoran. Kotoran yang mengandung Salmonella pullorum yang menginfeksi telur tetas bisa mengontaminasi anak ayam yang baru menetas. Penyebaran juga dapat terjadi melalui proses mematuk antara ayam yang sehat dan ayam yang sakit serta peralatan yang sudah terkontaminasi bakteri ini."
-            android:textColor="#526D82" />
+            android:textColor="@color/gray" />
 
         <TextView
             android:id="@+id/descriptionTextView2"
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Pemberian Furazolidone pada anak ayam akan mengurangi kematian. Furazolidone diberikan melalui pakan dengan dosis 100 g/ton pakan yang diberikan selama 2 minggu. Selanjutnya dosis dikurangi menjadi 50 g/ton pakan selama 2-3 minggu. Pengobatan pada ayam berumur 14 minggu tidak disarankan. Jika ayam sudah terinfeksi secara serius, sebaiknya dimusnahkan dan harus diikuti dengan meningkatkan program sanitasi."
-            android:textColor="#526D82" />
+            android:textColor="@color/gray" />
 
     </LinearLayout>
 </ScrollView>

@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f3f3f3"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -18,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Penyakit Infectious Coryza"
-            android:textColor="#526D82"
+            android:textColor="@color/gray"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="15dp" />
@@ -37,7 +38,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Penyakit Infectious Coryza disebabkan oleh bakteri gram negatif bernama Hemophilus paragallinarum. Coryza merupakan penyakit yang menyerang sistem pernapasan ayam yang bersifat akut dan subakut. Masa inkubasi terjadinya penyakit ini adalah 24-48 jam setelah terkontaminasi melalui intranasal atau intrasinus. Infectious coryza merupakan penyakit yang menyerang secara cepat dengan tingkat penularan (morbidity) tinggi. Penyakit ini dapat menurunkan konsumsi pakan dan produksi telur."
-            android:textColor="#526D82" />
+            android:textColor="@color/gray" />
 
         <TextView
             android:id="@+id/descriptionTextView2"
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Bakteri ini dapat dicegah dengan cara disinfectant, vaksinasi menggunakan bacterin dapat dilakukan untuk meningkatkan kekebalan tubuh. Mencegah penularan penyakit ini bisa dilakukan dengan cara memusnahkan ayam yang terserang, mengosongkan kandang selama beberapa hari kemudian mencuci dan membersihkannya, serta meningkatkan program sanitasi. Pengobatan dapat dilakukan dengan menggunakan beberapa preparat sulfanamides dan antibiotik yang diberikan melalui pakan atau air minum. Usahakan melakukan pengobatan ini jangan sampai berhenti karena dikhawatirkan ayam akan kambuh lagi. Beberapa obat dan antibiotik yang digunakan antara lain streptomycin, sulfadimethoxine, dan tylosin."
-            android:textColor="#526D82" />
+            android:textColor="@color/gray" />
 
     </LinearLayout>
 </ScrollView>

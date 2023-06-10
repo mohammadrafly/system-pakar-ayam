@@ -46,7 +46,10 @@ public class DiagnosaFragment extends Fragment {
         adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, itemsList);
         diseaseListView.setAdapter(adapter);
 
+        container = view.findViewById(R.id.linearLayoutGejala);
+        ViewGroup finalContainerGejala = container;
         diseaseListView.setOnItemClickListener((parent, view1, position, id) -> {
+            finalContainerGejala.setVisibility(View.VISIBLE);
             String selectedItem = itemsList[position];
             addChip(selectedItem);
         });
@@ -57,8 +60,11 @@ public class DiagnosaFragment extends Fragment {
         selectedItems = new ArrayList<>();
 
         progressBar = view.findViewById(R.id.progressBar);
+        container = view.findViewById(R.id.resultTextViewContainer);
+        ViewGroup finalContainer = container;
         predictButton.setOnClickListener(v -> {
             showSpinner();
+            finalContainer.setVisibility(View.VISIBLE);
             resultTextView.setText("Sedang proses..");
             resultTextView.setGravity(Gravity.CENTER);
             new Handler().postDelayed(() -> {
@@ -103,8 +109,6 @@ public class DiagnosaFragment extends Fragment {
         String prediction = model.deteksiPenyakit(symptoms);
 
         hideSpinner();
-        Toast.makeText(requireContext(), "Gejala yang dipilih: " + symptoms, Toast.LENGTH_SHORT).show();
-
         // Memformat output String prediction
         String[] diseases = prediction.split("\n");
         StringBuilder formattedPrediction = new StringBuilder();

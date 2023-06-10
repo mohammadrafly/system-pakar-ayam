@@ -1,5 +1,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="#f3f3f3"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -23,7 +24,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:text="TENTANG"
-            android:textColor="#526D82"
+            android:textColor="@color/gray"
             android:fontFamily="sans-serif-condensed-medium"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -36,7 +37,7 @@
             android:gravity="center"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Aplikasi ini dibuat sebagai persyaratan untuk memperoleh gelar Amd di Jurusan Teknologi Informasi Program Studi Manajemen Informatika Politeknik Negeri Jember"
-            android:textColor="#526D82" />
+            android:textColor="@color/gray"/>
 
         <TextView
             android:id="@+id/appNameTextView"
@@ -46,7 +47,7 @@
             android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Nama Aplikasi: Sistem Pakar Ayam"
-            android:textColor="#526D82" />
+            android:textColor="@color/gray" />
 
         <TextView
             android:id="@+id/thesisTitleTextView"
@@ -56,7 +57,7 @@
             android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Judul Tugas Akhir: Sistem Pakar Diagnosa Penyakit Ayam Menggunakan Metode Teorema Bayes Berbasis Android"
-            android:textColor="#526D82" />
+            android:textColor="@color/gray"/>
 
         <TextView
             android:id="@+id/studentNameTextView"
@@ -66,7 +67,7 @@
             android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Nama: Aisyah Utrujjah"
-            android:textColor="#526D82" />
+            android:textColor="@color/gray" />
 
         <TextView
             android:id="@+id/studentNimTextView"
@@ -76,7 +77,7 @@
             android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Nim: E31201300"
-            android:textColor="#526D82" />
+            android:textColor="@color/gray" />
 
         <TextView
             android:id="@+id/supervisorTextView"
@@ -86,7 +87,7 @@
             android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Pembimbing: Syamsul Arifin, S.Kom, M.Cs"
-            android:textColor="#526D82" />
+            android:textColor="@color/gray"/>
 
         <TextView
             android:id="@+id/expertTextView"
@@ -96,7 +97,7 @@
             android:gravity="left"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Pakar: Drh. Dharwin Siswantoro, M.kes."
-            android:textColor="#526D82" />
+            android:textColor="@color/gray"/>
 
     </LinearLayout>
 

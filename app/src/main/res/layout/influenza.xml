@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f3f3f3"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -18,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Penyakit Avian Influenza (Flu Burung)"
-            android:textColor="#526D82"
+            android:textColor="@color/gray"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="15dp" />
@@ -38,7 +39,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Avian Influenza (AI) atau lebih dikenal dengan sebutan penyakit flu burung disebabkan oleh virus yang diklasifikasikan ke dalam orthomyxoviruses dan memiliki tiga tipe A, B, dan C. Virus ini menyerang bagian pernapasan atau sistem saraf. Penyakit ini bisa menyebar dengan cara unggas yang terjangkit AI mengeluarkan virus melalui saluran pernapasan, conjunctiva, dan kotoran. Penyakit tersebut menular melalui kontak langsung antara ayam yang sakit dan ayam yang sehat. Selain itu, bisa menular secara tidak langsung melalui udara atau virus yang dikeluarkan melalui kotoran, kendaraan, peralatan, pakan, dan air minum yang sudah terkontaminasi AI."
-            android:textColor="#526D82" />
+            android:textColor="@color/gray" />
 
         <TextView
             android:id="@+id/descriptionTextView2"
@@ -47,7 +48,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Cara menanggulangi penyakit ini dengan cara pemberian antibiotik, multivitamin, melaksanakan vaksinasi; mengisolasi farm atau peternakan yang terkena; memusnahkan semua ayam yang terinfeksi; melarang keluar masuk peralatan, orang, dan kendaraan ke daerah peternakan yang terkena AI; melakukan sanitasi (biosecurity) ketat; serta mengistirahatkan farm yang terinfeksi. Belum ada obat yang efektif untuk mengatasi penyakit ini, upaya yang bisa dilakukan adalah memberi pakan yang berkualitas, memperbaiki manajemen pemeliharaan, dan memberikan antibiotik spektrum luas."
-            android:textColor="#526D82" />
+            android:textColor="@color/gray" />
 
     </LinearLayout>
 </ScrollView>

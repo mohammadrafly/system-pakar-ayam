@@ -1,107 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp">
-
+    android:background="@drawable/rounded_bg"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:background="#f3f3f3"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
 
-        <!-- List of Diseases -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="List Gejala Ayam"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:textStyle="bold"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp" />
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:text="GEJALA AYAM"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textStyle="bold"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
 
-                <ListView
-                    android:id="@+id/diseaseListView"
+            <ScrollView
+                android:layout_width="match_parent"
+                android:background="@drawable/rounded_bg"
+                android:layout_height="200dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:paddingBottom="16dp" />
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/diseaseListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:paddingBottom="16dp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutGejala"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_bg"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="48dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroup"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
 
             </LinearLayout>
 
-        </ScrollView>
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_input"
-            android:orientation="horizontal">
-
-            <HorizontalScrollView
+            <Button
+                android:id="@+id/predictButton"
                 android:layout_width="match_parent"
-                android:layout_height="48dp">
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:backgroundTint="#223f93"
+                android:text="Diagnosa" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="vertical">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/predictButton"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:visibility="gone" />
 
-                    <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/chipGroup"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-            </HorizontalScrollView>
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/predictButton"
+        <ScrollView
+            android:id="@+id/resultTextViewContainer"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_bg"
+            android:paddingLeft="10dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rounded"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:backgroundTint="@color/blue"
-            android:text="Diagnosa" />
+            android:layout_marginBottom="20dp"
+            android:paddingRight="10dp"
+            android:visibility="gone">
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/predictButton"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/resultTextView"
-            android:layout_width="match_parent"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="50dp"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/gray"
+                android:layout_marginBottom="50dp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </ScrollView>
     </LinearLayout>
 </ScrollView>
+

@@ -2,5 +2,6 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.AplikasiPakarAyam" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">#FF0000</item>
+        <item name="android:windowBackground">@color/custom_blue_theme</item>
     </style>
 </resources>
