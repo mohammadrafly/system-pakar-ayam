@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PenyakitModel {
+    // Array yang menyimpan nama-nama penyakit
     private static final String[] PENYAKIT = {
             "Gumboro",
             "Infectious Coryza",
@@ -13,6 +14,7 @@ public class PenyakitModel {
             "Pullorum Disease"
     };
 
+    // Array yang menyimpan probabilitas masing-masing penyakit
     private static final double[] PROBABILITAS_PENYAKIT = {
             0.3,
             0.4,
@@ -22,8 +24,10 @@ public class PenyakitModel {
             0.3
     };
 
+    // HashMap yang menyimpan data gejala-gejala penyakit
     private static final Map<String, Map<String, Double>> DATA_PENYAKIT = new HashMap<>();
 
+    //hashMap atau peta penyakit dengan gejala dan angka probabilitasnya
     static {
         // Gumboro
         Map<String, Double> gumboroGejala = new HashMap<>();
@@ -36,7 +40,7 @@ public class PenyakitModel {
         // Infectious Coryza
         Map<String, Double> coryzaGejala = new HashMap<>();
         coryzaGejala.put("Terjadi pembengkakan di daerah mata dan muka", 0.7);
-        coryzaGejala.put("Produksi telur menurun", 0.7);
+        coryzaGejala.put("Produksi telur menurun", 0.4);
         coryzaGejala.put("Ngorok basah", 0.6);
         coryzaGejala.put("Keluar lendir pada hidung", 0.6);
         coryzaGejala.put("Napsu makan menurun", 0.4);
@@ -62,7 +66,7 @@ public class PenyakitModel {
         bronchitisGejala.put("Ngorok basah", 0.6);
         bronchitisGejala.put("Ayam batuk", 0.4);
         bronchitisGejala.put("Lesu", 0.4);
-        bronchitisGejala.put("Napsu makan & Berat badan turun drastis", 0.4);
+        bronchitisGejala.put("Napsu makan dan Berat badan turun drastis", 0.4);
         DATA_PENYAKIT.put("Infectious Bronchitis", bronchitisGejala);
 
         // New Castle Disease
@@ -76,38 +80,46 @@ public class PenyakitModel {
         newCastleGejala.put("Ayam tampak lesu", 0.4);
         newCastleGejala.put("Jengger berwarna keabuan", 0.4);
         newCastleGejala.put("Napsu makan menurun", 0.4);
-        newCastleGejala.put("Diare Kehijauan", 0.4);
+        newCastleGejala.put("Diare kehijauan", 0.4);
         DATA_PENYAKIT.put("New Castle Disease", newCastleGejala);
 
         // Pullorum Disease
         Map<String, Double> pullorumGejala = new HashMap<>();
         pullorumGejala.put("Sayap menggantung dan lemas", 0.7);
         pullorumGejala.put("Kotoran berwarna putih", 0.6);
-        pullorumGejala.put("Lumpuh karena arthritis", 0.5);
+        pullorumGejala.put("Lumpuh karena artritis", 0.5);
         pullorumGejala.put("Napsu makan pada ayam menurun", 0.4);
         pullorumGejala.put("Jengger berwarna keabuan", 0.4);
         pullorumGejala.put("Ayam tampak lesu", 0.4);
         DATA_PENYAKIT.put("Pullorum Disease", pullorumGejala);
     }
 
+    /**
+     * Mendeteksi penyakit berdasarkan gejala yang terpilih.
+     * @param gejalaTerpilih Array yang berisi gejala yang terpilih.
+     * @return String yang berisi hasil deteksi penyakit beserta probabilitasnya.
+     */
     public String deteksiPenyakit(String[] gejalaTerpilih) {
         StringBuilder hasilDeteksi = new StringBuilder();
 
         double[] probabilitasPenyakit = new double[PENYAKIT.length];
         double totalProbabilitasGejala = 0.0;
 
+        // Iterasi untuk setiap penyakit
         for (int i = 0; i < PENYAKIT.length; i++) {
             String penyakit = PENYAKIT[i];
             double probabilitasPenyakitAwal = PROBABILITAS_PENYAKIT[i];
             Map<String, Double> gejalaPenyakit = DATA_PENYAKIT.get(penyakit);
 
             double probabilitasGejala = 1.0;
+
+            // Iterasi untuk setiap gejala yang terpilih
             for (String gejala : gejalaTerpilih) {
                 if (gejalaPenyakit.containsKey(gejala)) {
                     double probabilitas = gejalaPenyakit.get(gejala);
                     probabilitasGejala *= probabilitas;
                 } else {
-                    probabilitasGejala *= 0.1; // Faktor ketidaktahuan
+                    probabilitasGejala *= 0.0; // Memberikan probabilitas 0.1 jika gejala tidak ada di hashmap
                 }
             }
 
@@ -115,6 +127,7 @@ public class PenyakitModel {
             totalProbabilitasGejala += probabilitasPenyakit[i];
         }
 
+        // Menghitung probabilitas akhir dan menghasilkan string hasil deteksi
         if (totalProbabilitasGejala != 0) {
             for (int i = 0; i < PENYAKIT.length; i++) {
                 String penyakit = PENYAKIT[i];
