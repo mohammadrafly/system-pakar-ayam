@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class DiagnosaFragment extends Fragment {
     private ChipGroup chipGroup;  // ChipGroup untuk menampilkan item yang dipilih sebagai chip
     private ArrayAdapter<String> adapter;  // ArrayAdapter untuk ListView
     private ProgressBar progressBar;  // ProgressBar untuk menampilkan progres
+    private Button predictButton;
 
     public DiagnosaFragment() {
     }
@@ -55,7 +57,7 @@ public class DiagnosaFragment extends Fragment {
             addChip(selectedItem);
         });
 
-        Button predictButton = view.findViewById(R.id.predictButton);
+        predictButton = view.findViewById(R.id.predictButton);
         resultTextView = view.findViewById(R.id.resultTextView);
         chipGroup = view.findViewById(R.id.chipGroup);
         selectedItems = new ArrayList<>();
@@ -149,7 +151,7 @@ public class DiagnosaFragment extends Fragment {
         if (!formattedPredictionString.isEmpty()) {
             resultTextView.setText(formattedPredictionString);
         } else {
-            resultTextView.setText("Tidak ada prediksi yang tersedia.");
+            resultTextView.setText("Prediksi tidak tersedia");
         }
 
         // Menampilkan penyakit dengan presentase tertinggi
