@@ -3,14 +3,12 @@ package com.example.aplikasipakarayam;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -27,13 +25,12 @@ import java.util.List;
 import java.util.Map;
 
 public class DiagnosaFragment extends Fragment {
-    private TextView resultTextView;  // TextView untuk menampilkan hasil
-    private PenyakitModel model;  // Instance dari kelas PenyakitModel
-    private List<String> selectedItems;  // List untuk menyimpan item yang dipilih
-    private ChipGroup chipGroup;  // ChipGroup untuk menampilkan item yang dipilih sebagai chip
-    private ArrayAdapter<String> adapter;  // ArrayAdapter untuk ListView
-    private ProgressBar progressBar;  // ProgressBar untuk menampilkan progres
-    private Button predictButton;
+    private TextView resultTextView;
+    private PenyakitModel model;
+    private List<String> selectedItems;
+    private ChipGroup chipGroup;
+    private ArrayAdapter<String> adapter;
+    private ProgressBar progressBar;
 
     public DiagnosaFragment() {
     }
@@ -57,7 +54,7 @@ public class DiagnosaFragment extends Fragment {
             addChip(selectedItem);
         });
 
-        predictButton = view.findViewById(R.id.predictButton);
+        Button predictButton = view.findViewById(R.id.predictButton);
         resultTextView = view.findViewById(R.id.resultTextView);
         chipGroup = view.findViewById(R.id.chipGroup);
         selectedItems = new ArrayList<>();
@@ -68,7 +65,7 @@ public class DiagnosaFragment extends Fragment {
         predictButton.setOnClickListener(v -> {
             showSpinner();
             finalContainer.setVisibility(View.VISIBLE);
-            resultTextView.setText("Sedang diproses..");
+            resultTextView.setText("Sedang proses..");
             resultTextView.setGravity(Gravity.CENTER);
             new Handler().postDelayed(() -> {
                 performPrediction();
@@ -98,7 +95,7 @@ public class DiagnosaFragment extends Fragment {
         chip.setText(text);
         chip.setCloseIconVisible(true);
         chip.setCloseIconTintResource(com.google.android.material.R.color.design_default_color_error);
-        chip.setCloseIconContentDescription("Hapus");
+        chip.setCloseIconContentDescription("Remove");
         chip.setOnCloseIconClickListener(v -> {
             chipGroup.removeView(chip);
             selectedItems.remove(text);
@@ -124,7 +121,7 @@ public class DiagnosaFragment extends Fragment {
                 String diseaseName = parts[0].trim();
                 String percentage = parts[1].trim();
 
-                // Menghapus simbol persentase dari string
+                // Remove the percentage symbol from the string
                 String percentageWithoutSymbol = percentage.replace("%", "");
 
                 try {
@@ -134,12 +131,12 @@ public class DiagnosaFragment extends Fragment {
                         highestDisease = diseaseName;
                     }
 
-                    // Memformat string persentase
+                    // Format the percentage string
                     String formattedPercentage = String.format("%.2f", currentPercentage);
 
                     formattedPrediction.append(diseaseName).append(": ").append(formattedPercentage).append("%\n");
                 } catch (NumberFormatException e) {
-                    // Menghandle kesalahan parsing di sini
+                    // Handle any parsing errors here
                     e.printStackTrace();
                 }
             }
@@ -147,11 +144,8 @@ public class DiagnosaFragment extends Fragment {
 
         // Menampilkan hasil prediksi yang diformat
         String formattedPredictionString = formattedPrediction.toString();
-        Log.d("Prediksi", prediction);
         if (!formattedPredictionString.isEmpty()) {
             resultTextView.setText(formattedPredictionString);
-        } else {
-            resultTextView.setText("Prediksi tidak tersedia");
         }
 
         // Menampilkan penyakit dengan presentase tertinggi
@@ -166,24 +160,24 @@ public class DiagnosaFragment extends Fragment {
                     resultTextView.append("\n\n" + gumboroAction);
                     break;
                 case "Infectious Coryza":
-                    String coryzaAction = "Penanganan: Pengobatan dapat dilakukan dengan menggunakan beberapa preparat sulfanamides dan antibiotik yang diberikan melalui pakan atau air minum usahakan melakukan pengobatan ini jangan sampai berhenti karena dikhawatirkan ayam akan kambuh lagi. Beberapa obat dan antibiotik yang digunakan streptomycin, Sulfadimethoxine, dan tylosin.";
-                    resultTextView.append("\n\n" + coryzaAction);
+                    String CoryzaAction = "Penanganan: Pengobatan dapat dilakukan dengan menggunakan beberapa preparat sulfanamides dan antibiotik yang diberikan melalui pakan atau air minum usahakan melakukan pengobatan ini jangan sampai berhenti karena dikhawatirkan ayam akan kambuh lagi. Beberapa obat dan antibiotik yang digunakan streptomycin,Sulfadimethoxine, dan tylosin.";
+                    resultTextView.append("\n\n" + CoryzaAction);
                     break;
                 case "Avian Influenza":
-                    String influenzaAction = "Penanganan: Cara menanggulangi penyakit ini dengan cara pemberian antibiotik, multivitamin, melaksanakan vaksisnasi; mengisolasi farm atau peternakan yang terkena; memusnahkan semua ayam yang terinfeksi; melarang keluar masuk peralatan, orang, dan kendaraan ke daerah peternakan yang terkena AI; melakukan sanitasi (biosecurity) ketat; serta mengistirahatkan farm yang terinfeksi.\n";
-                    resultTextView.append("\n\n" + influenzaAction);
+                    String InfluenzaAction = "Penanganan: Cara menanggulangi penyakit ini dengan cara pemberian antibiotik, multivitamin, melaksanakan vaksisnasi ; mengisolasi farm atau peternakan yang terkena ; memusnahkan semua ayama yang terinfeksi; melarang keluar masuk peralatan, orang dan kendaraan ke daerah peternakan yang terkena AI ; melakukan sanitasi(biosecurity) ketat; serta mengistirahatkan farm yang  terinfeksi.\n";
+                    resultTextView.append("\n\n" + InfluenzaAction);
                     break;
                 case "Infectious Bronchitis":
-                    String bronchitisAction = "Penanganan: Penggobatan supportif dengan cara pemberian multivitamin atau campuran multivitamin dan elektrolit juga perlu dilakukan untuk mempercepat proses kesembuhan jaringan yang rusak akibat virus IB.\n";
-                    resultTextView.append("\n\n" + bronchitisAction);
+                    String BronchitisAction = "Penanganan: Penggobatan supportif dengan cara pemberian multivitamin atau campuran multivitamin dan elektrolit juga perlu dilakukan untuk mempercepat proses kesembuhan jaringan yang rusak akibat virus IB. \n";
+                    resultTextView.append("\n\n" + BronchitisAction);
                     break;
                 case "New Castle Disease":
-                    String castleAction = "Penanganan: Pencegahan penyakit ND hanya bisa dilakukan dengan cara memberikan vaksinasi, tetapi untuk penyembuhan penyakit ini belum ada obat.";
-                    resultTextView.append("\n\n" + castleAction);
+                    String CastleAction = "Penanganan: Pencegahan penyakit ND hanya bisa dengan cara memberikan vaksinasi tetapi untuk penyembuhan penyakit ini belum ada obat.";
+                    resultTextView.append("\n\n" + CastleAction);
                     break;
                 case "Pullorum Disease":
-                    String pullorumAction = "Penanganan: Pemberian Furazolidone pada anak ayam akan mengurangi kematian. Furazolidone diberikan melalui pakan dengan dosis 100 g/ton pakan yang diberikan selama 2 minggu.\n";
-                    resultTextView.append("\n\n" + pullorumAction);
+                    String PullorumAction = "Penanganan: Pemberian Furazolidone pada anak ayam akan mengurangi kematian. Furazolidone diberikan melalui pakan dengan dosis 100 g/ton pakan yang diberikan selama 2 minggu.\n";
+                    resultTextView.append("\n\n" + PullorumAction);
                     break;
                 default:
                     break;
@@ -192,8 +186,10 @@ public class DiagnosaFragment extends Fragment {
     }
 
     private String[] getSelectedItemsAsArray() {
-        String[] itemsArray = new String[selectedItems.size()];
-        itemsArray = selectedItems.toArray(itemsArray);
-        return itemsArray;
+        String[] selectedItemsArray = new String[selectedItems.size()];
+        for (int i = 0; i < selectedItems.size(); i++) {
+            selectedItemsArray[i] = selectedItems.get(i);
+        }
+        return selectedItemsArray;
     }
 }
