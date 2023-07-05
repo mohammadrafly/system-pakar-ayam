@@ -94,43 +94,35 @@ public class PenyakitModel {
 
     public String deteksiPenyakit(String[] gejalaTerpilih) {
         StringBuilder hasilDeteksi = new StringBuilder();
-
         double[] probabilitasPenyakit = new double[PENYAKIT.length];
-        double totalAkumulasiGejala = 0.0;
+        double totalProbabilitasGejala = 0.0;
 
+        // Iterasi untuk setiap penyakit
         for (int i = 0; i < PENYAKIT.length; i++) {
             String penyakit = PENYAKIT[i];
             double probabilitasPenyakitAwal = PROBABILITAS_PENYAKIT.get(penyakit);
             Map<String, Double> gejalaPenyakit = DATA_PENYAKIT.get(penyakit);
 
-            double akumulasiGejala = 0.0;
+            double probabilitasGejala = 1.0;
+
+            // Iterasi untuk setiap gejala yang terpilih
             for (String gejala : gejalaTerpilih) {
                 if (gejalaPenyakit.containsKey(gejala)) {
-                    double probabilitasGejala = gejalaPenyakit.get(gejala);
-                    akumulasiGejala += probabilitasGejala;
+                    double probabilitas = gejalaPenyakit.get(gejala);
+                    probabilitasGejala *= probabilitas;
                 } else {
-                    akumulasiGejala += 0.0; // Faktor ketidaktahuan
+                    probabilitasGejala *= 0.1; // Memberikan probabilitas 0.1 jika gejala tidak ada di hashmap
                 }
             }
 
-            probabilitasPenyakit[i] = akumulasiGejala * probabilitasPenyakitAwal;
-            totalAkumulasiGejala += akumulasiGejala;
-
-            // Logcat perhitungan
-            System.out.println("Penyakit: " + penyakit);
-            System.out.println("Probabilitas Awal: " + probabilitasPenyakitAwal);
-            System.out.println("Akumulasi Gejala: " + akumulasiGejala);
-            System.out.println("Probabilitas Penyakit: " + probabilitasPenyakit[i]);
-            System.out.println("-----------------------------------------");
+            probabilitasPenyakit[i] = probabilitasPenyakitAwal * probabilitasGejala;
+            totalProbabilitasGejala += probabilitasPenyakit[i];
         }
 
-        if (totalAkumulasiGejala != 0) {
-            for (int i = 0; i < PENYAKIT.length; i++) {
-                String penyakit = PENYAKIT[i];
-                double probabilitas = probabilitasPenyakit[i] * 100;
-
-                hasilDeteksi.append(penyakit).append(": ").append(probabilitas).append("%\n");
-            }
+        for (int i = 0; i < PENYAKIT.length; i++) {
+            String penyakit = PENYAKIT[i];
+            double probabilitas = totalProbabilitasGejala > 0 ? probabilitasPenyakit[i] / totalProbabilitasGejala : 0.0;
+            hasilDeteksi.append(penyakit).append(": ").append(probabilitas * 100).append("%\n");
         }
 
         return hasilDeteksi.toString();
